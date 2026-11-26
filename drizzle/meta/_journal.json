@@ -8,6 +8,13 @@
       "when": 1795691295345,
       "tag": "0000_condemned_romulus",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795691880360,
+      "tag": "0001_groovy_annihilus",
+      "breakpoints": true
     }
   ]
 }

@@ -73,3 +73,4 @@ scripts/seed.ts        admin pertama & data contoh
 - Setiap server action & route handler memverifikasi sesi dan role di server (bukan hanya UI).
 - Password di-hash `scrypt` (salt acak); cookie sesi `httpOnly`, `sameSite=lax`, `secure` di produksi; yang disimpan di DB hanya hash SHA-256 token.
 - Minimal satu admin dijaga; admin tidak bisa menghapus atau menurunkan role akunnya sendiri.
+- **Rate limit login** (`src/lib/rate-limit.ts`, tabel `login_attempts`): maks. 5 gagal per username+IP dan 20 gagal per IP dalam 15 menit. Disimpan di DB sehingga berlaku di semua instance serverless. IP dibaca dari `x-forwarded-for`, yang di Vercel diisi oleh platform; bila di-deploy di belakang proxy lain, pastikan proxy tersebut menimpa header ini.
