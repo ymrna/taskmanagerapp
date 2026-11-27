@@ -44,7 +44,7 @@ export default function AppLayout({ children }: LayoutProps<"/">) {
       <header className="no-print sticky top-0 z-30 border-b border-slate-200 bg-white">
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-4 gap-y-2 px-3 py-2 sm:px-4">
           <Link href="/jadwal" className="font-semibold text-sky-800">
-            Jadwal Tim Kerja
+            Jadwal Tim Kerja Montib PKP
           </Link>
           <Suspense fallback={<div className="h-7 flex-1" />}>
             <UserNav />
