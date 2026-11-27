@@ -12,9 +12,15 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
+// Terapkan status sidebar (disembunyikan/tidak) sebelum render pertama agar tata letak tidak berkedip.
+const SIDEBAR_SCRIPT = `try{if(localStorage.getItem("sidebar")==="hidden")document.documentElement.dataset.sidebar="hidden"}catch(e){}`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="id" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
+    <html lang="id" className={`${geistSans.variable} ${geistMono.variable} h-full`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: SIDEBAR_SCRIPT }} />
+      </head>
       <body className="flex min-h-full flex-col font-sans">{children}</body>
     </html>
   );

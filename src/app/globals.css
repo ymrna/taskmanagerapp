@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Aktif bila pengguna menyembunyikan sidebar di desktop (lihat sidebar.tsx) */
+@custom-variant sidebar-hidden (&:where([data-sidebar="hidden"], [data-sidebar="hidden"] *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);

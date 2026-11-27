@@ -9,7 +9,7 @@ async function SidebarLoader() {
 
 export default function AppLayout({ children }: LayoutProps<"/">) {
   return (
-    <div className="min-h-full lg:pl-64">
+    <div className="min-h-full transition-[padding] lg:pl-64 lg:sidebar-hidden:pl-0">
       <Suspense fallback={<SidebarSkeleton />}>
         <SidebarLoader />
       </Suspense>
