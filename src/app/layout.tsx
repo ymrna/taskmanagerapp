@@ -6,7 +6,7 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: { default: "Jadwal Tim Kerja", template: "%s · Jadwal Tim Kerja" },
+  title: { default: "Jadwal Tim Kerja Montib PKP", template: "%s · Jadwal Tim Kerja Montib PKP" },
   description: "Manajemen jadwal kegiatan dan task tim kerja per minggu",
 };
 

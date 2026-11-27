@@ -25,7 +25,7 @@ async function PrintView({ searchParams }: { searchParams: PageProps<"/cetak">["
     <>
       <div className="mb-3 flex items-end justify-between gap-4">
         <div>
-          <h1 className="text-lg font-semibold">Jadwal Kegiatan Tim Kerja</h1>
+          <h1 className="text-lg font-semibold">Jadwal Kegiatan Tim Kerja Montib PKP</h1>
           <p className="text-sm text-slate-600">
             {monthLabel(p.from)} – {monthLabel(p.to)}
             {filters.length > 0 && ` · ${filters.join(" · ")}`}

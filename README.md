@@ -1,4 +1,4 @@
-# Jadwal Tim Kerja
+# Jadwal Tim Kerja Montib PKP
 
 Aplikasi manajemen jadwal task untuk tim kerja: tabel **Tim Kerja → Kegiatan × Minggu per bulan**, CRUD task di setiap sel minggu, status task, dan data petugas.
 
