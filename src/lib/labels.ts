@@ -9,6 +9,19 @@ export const STATUS: Record<TaskStatus, { label: string; chip: string; dot: stri
 
 export const STATUS_KEYS = Object.keys(STATUS) as TaskStatus[];
 
+/**
+ * Warna status untuk chart (divalidasi dengan validator palet dataviz).
+ * Urutan tumpukan memisahkan hijau & merah agar pasangan bersebelahan tetap
+ * terbedakan oleh pembaca buta warna; status selalu disertai simbol + label.
+ */
+export const STATUS_COLOR: Record<TaskStatus, string> = {
+  selesai: "#0aac23",
+  diganti: "#fbb315",
+  tidak_dikerjakan: "#dc3c3d",
+  belum: "#64748b",
+};
+export const STACK_ORDER: TaskStatus[] = ["selesai", "diganti", "tidak_dikerjakan", "belum"];
+
 export const REPLACEMENT: Record<ReplacementType, string> = {
   jadwal_ulang: "Dijadwal ulang",
   ganti_kegiatan: "Ganti kegiatan",

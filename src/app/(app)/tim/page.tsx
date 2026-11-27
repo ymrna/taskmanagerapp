@@ -5,6 +5,7 @@ import { db } from "@/db";
 import { activities, tasks, teams } from "@/db/schema";
 import { deleteActivity, deleteTeam, saveActivity, saveTeam } from "@/app/actions/master";
 import { ActionForm } from "@/components/action-form";
+import { PageHeader } from "@/components/page-header";
 import { requireAdminPage } from "@/lib/auth";
 
 export const metadata: Metadata = { title: "Tim & Kegiatan" };
@@ -129,7 +130,7 @@ function ItemFields({ d, nameLabel }: { d?: Item; nameLabel: string }) {
 export default function TimPage() {
   return (
     <>
-      <h1 className="mb-3 text-lg font-semibold">Tim Kerja & Kegiatan</h1>
+      <PageHeader icon="layers" title="Tim Kerja & Kegiatan" subtitle="Kelola tim kerja dan daftar kegiatannya. Urutan menentukan posisi baris di jadwal." />
       <Suspense fallback={<div className="card h-64 animate-pulse bg-slate-100" />}>
         <TeamList />
       </Suspense>

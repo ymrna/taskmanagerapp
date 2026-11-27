@@ -5,6 +5,7 @@ import { db } from "@/db";
 import { users } from "@/db/schema";
 import { createUser, deleteUser, updateUser } from "@/app/actions/master";
 import { ActionForm } from "@/components/action-form";
+import { PageHeader } from "@/components/page-header";
 import { requireAdminPage } from "@/lib/auth";
 import { ROLE_LABEL } from "@/lib/labels";
 
@@ -105,7 +106,7 @@ function UserFields({ d, passwordRequired }: { d?: U; passwordRequired?: boolean
 export default function PenggunaPage() {
   return (
     <>
-      <h1 className="mb-3 text-lg font-semibold">Pengguna</h1>
+      <PageHeader icon="users" title="Pengguna" subtitle="Akun yang dapat masuk ke aplikasi." />
       <Suspense fallback={<div className="card h-64 animate-pulse bg-slate-100" />}>
         <UserList />
       </Suspense>

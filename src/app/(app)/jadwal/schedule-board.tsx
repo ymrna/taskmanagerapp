@@ -43,7 +43,7 @@ export function ScheduleBoard({ data, isAdmin, currentWeek, readOnly }: Props) {
         ) : isAdmin ? (
           <>
             Belum ada tim kerja.{" "}
-            <Link href="/tim" className="text-sky-700 underline">
+            <Link href="/tim" className="text-blue-700 underline">
               Tambahkan tim & kegiatan
             </Link>
             .
@@ -89,7 +89,7 @@ export function ScheduleBoard({ data, isAdmin, currentWeek, readOnly }: Props) {
                   key={w.start}
                   title={`${shortDate(w.start)} – ${shortDate(w.end)}`}
                   className={`min-w-28 border-r border-b border-slate-200 p-1 text-center font-medium sm:min-w-32 ${
-                    w.start === currentWeek ? "bg-sky-100 text-sky-900" : "bg-slate-50"
+                    w.start === currentWeek ? "bg-blue-100 text-blue-900" : "bg-slate-50"
                   }`}
                 >
                   M{w.index}
@@ -128,7 +128,7 @@ export function ScheduleBoard({ data, isAdmin, currentWeek, readOnly }: Props) {
                       <td
                         key={w.start}
                         className={`group border-r border-b border-slate-200 p-1 ${
-                          w.start === currentWeek ? "bg-sky-50/60" : ""
+                          w.start === currentWeek ? "bg-blue-50/60" : ""
                         }`}
                       >
                         <div className="flex min-h-10 flex-col gap-1">
@@ -147,7 +147,7 @@ export function ScheduleBoard({ data, isAdmin, currentWeek, readOnly }: Props) {
                               onClick={() =>
                                 setTarget({ kind: "new", activity: act, teamName: team.name, teamId: team.id, weekStart: w.start })
                               }
-                              className="rounded border border-dashed border-transparent py-0.5 text-slate-400 hover:border-sky-300 hover:bg-sky-50 hover:text-sky-700 focus:border-sky-300 sm:opacity-0 sm:group-hover:opacity-100 sm:focus:opacity-100"
+                              className="rounded border border-dashed border-transparent py-0.5 text-slate-400 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus:border-blue-300 sm:opacity-0 sm:group-hover:opacity-100 sm:focus:opacity-100"
                               aria-label={`Tambah task ${act.name} minggu ${shortDate(w.start)}`}
                             >
                               +
@@ -218,7 +218,7 @@ function TaskChip({
     <button
       type="button"
       onClick={onOpen}
-      className={`${cls} hover:ring-2 hover:ring-sky-200 focus:ring-2 focus:ring-sky-300 focus:outline-none`}
+      className={`${cls} hover:ring-2 hover:ring-blue-200 focus:ring-2 focus:ring-blue-300 focus:outline-none`}
       aria-label={`${task.title} — ${s.label}`}
     >
       {content}
@@ -235,7 +235,7 @@ function Legend() {
         </li>
       ))}
       <li className="flex items-center gap-1">
-        <span className="inline-block h-3 w-3 rounded bg-sky-100" /> Minggu ini
+        <span className="inline-block h-3 w-3 rounded bg-blue-100" /> Minggu ini
       </li>
     </ul>
   );

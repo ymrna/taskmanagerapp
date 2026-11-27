@@ -42,7 +42,7 @@ export async function login(_prev: LoginState, fd: FormData): Promise<LoginState
 
   await clearLoginFailures(keys);
   await createSession(user.id);
-  redirect("/jadwal");
+  redirect("/");
 }
 
 export async function logout() {

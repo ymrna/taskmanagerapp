@@ -209,7 +209,7 @@ function StatusFields({ task, weekStart }: { task: TaskView | null; weekStart: s
           <label
             key={k}
             className={`flex cursor-pointer items-center gap-2 rounded-md border px-2 py-2 text-sm ${
-              status === k ? `${STATUS[k].chip} ring-2 ring-sky-200` : "border-slate-200 bg-white"
+              status === k ? `${STATUS[k].chip} ring-2 ring-blue-200` : "border-slate-200 bg-white"
             }`}
           >
             <input type="radio" name="status" value={k} checked={status === k} onChange={() => setStatus(k)} className="sr-only" />

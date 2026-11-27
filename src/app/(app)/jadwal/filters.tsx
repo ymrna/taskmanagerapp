@@ -82,7 +82,7 @@ export function ScheduleFilters({ data, currentMonth }: { data: ScheduleData; cu
             <Link
               key={pr.label}
               href={href}
-              className={`rounded-full border px-2.5 py-1 ${on ? "border-sky-300 bg-sky-50 text-sky-800" : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}
+              className={`rounded-full border px-2.5 py-1 ${on ? "border-blue-300 bg-blue-50 text-blue-800" : "border-slate-200 bg-white text-slate-600 hover:bg-slate-50"}`}
             >
               {pr.label}
             </Link>

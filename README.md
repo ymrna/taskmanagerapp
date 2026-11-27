@@ -4,6 +4,8 @@ Aplikasi manajemen jadwal task untuk tim kerja: tabel **Tim Kerja → Kegiatan �
 
 ## Fitur
 
+- **Dashboard** (halaman utama): ringkasan per tahun (filter tim) — total task, selesai/belum/diganti/tidak dikerjakan, terlambat; grafik task per bulan (bertumpuk per status, klik untuk membuka jadwal bulan itu, tersedia tampilan tabel); progres keseluruhan; tabel task per kegiatan; daftar kegiatan mendatang.
+- **Navigasi sidebar** biru (desktop) / drawer (HP).
 - **Schedule**: baris dikelompokkan per tim → kegiatan; kolom = minggu kalender per bulan (4–5 minggu). Rentang bulan bebas (maks. 24 bulan), plus pintasan bulan/triwulan/semester/tahun. Minggu berjalan disorot.
 - **Task**: tambah/ubah/hapus task di sel minggu, banyak task per sel, banyak petugas per task.
 - **Status**: Belum · Selesai · Diganti · Tidak dikerjakan.
@@ -49,6 +51,8 @@ Perintah lain: `npm test` (unit test minggu), `npm run typecheck`, `npm run lint
    DATABASE_URL="<url>" ADMIN_PASSWORD="<kuat>" npm run db:seed
    ```
 4. Deploy (`vercel` atau push ke Git yang terhubung).
+
+> **Penting:** `vercel link` / `vercel env pull` membuat `.env.local` berisi `DATABASE_URL` **produksi**, dan Next.js memprioritaskan `.env.local` di atas `.env`. Ganti namanya (mis. `.env.vercel`) agar `npm run dev`/`build` lokal tidak menulis ke database produksi.
 
 ## Struktur
 

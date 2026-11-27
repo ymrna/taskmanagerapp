@@ -5,6 +5,7 @@ import { db } from "@/db";
 import { officers, taskOfficers, teams } from "@/db/schema";
 import { deleteOfficer, saveOfficer } from "@/app/actions/master";
 import { ActionForm } from "@/components/action-form";
+import { PageHeader } from "@/components/page-header";
 import { requireAdminPage } from "@/lib/auth";
 
 export const metadata: Metadata = { title: "Petugas" };
@@ -126,7 +127,7 @@ function OfficerFields({ d, teams }: { d?: Officer; teams: TeamOpt[] }) {
 export default function PetugasPage({ searchParams }: PageProps<"/petugas">) {
   return (
     <>
-      <h1 className="mb-3 text-lg font-semibold">Petugas</h1>
+      <PageHeader icon="badge" title="Petugas" subtitle="Data petugas yang dapat ditugaskan ke task." />
       <Suspense fallback={<div className="card h-64 animate-pulse bg-slate-100" />}>
         <OfficerList searchParams={searchParams} />
       </Suspense>
