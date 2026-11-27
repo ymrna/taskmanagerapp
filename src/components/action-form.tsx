@@ -14,13 +14,15 @@ type Props = {
   onSuccess?: (r: ActionResult) => void;
   /** Sembunyikan pesan sukses (mis. form yang langsung tertutup). */
   quiet?: boolean;
+  /** id form, agar input di luar form (atribut `form`) ikut terkirim. */
+  id?: string;
 };
 
 /**
  * Form yang memanggil server action tanpa me-reset input saat gagal validasi,
  * menonaktifkan input selama proses, dan menampilkan pesan hasil.
  */
-export function ActionForm({ action, children, className, resetOnSuccess, confirm, onSuccess, quiet }: Props) {
+export function ActionForm({ action, children, className, resetOnSuccess, confirm, onSuccess, quiet, id }: Props) {
   const [pending, start] = useTransition();
   const [result, setResult] = useState<ActionResult | null>(null);
   const ref = useRef<HTMLFormElement>(null);
@@ -28,6 +30,7 @@ export function ActionForm({ action, children, className, resetOnSuccess, confir
   return (
     <form
       ref={ref}
+      id={id}
       className={className}
       onSubmit={(e) => {
         e.preventDefault();

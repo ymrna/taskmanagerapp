@@ -23,7 +23,7 @@
     disabled:cursor-not-allowed disabled:opacity-50;
 }
 @utility btn-primary {
-  @apply btn bg-gradient-to-b from-blue-500 to-blue-600 text-white shadow-sm shadow-blue-600/30 hover:from-blue-600 hover:to-blue-700;
+  @apply btn bg-blue-700 text-white shadow-sm hover:bg-blue-800;
 }
 @utility btn-secondary {
   @apply btn border border-slate-200 bg-white text-slate-700 shadow-xs hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700;

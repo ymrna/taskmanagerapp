@@ -33,10 +33,10 @@ export function Sidebar({ user }: { user: { name: string; role: Role } }) {
   const current = items.find((i) => isActive(path, i.href));
 
   const panel = (
-    <div className="flex h-full flex-col bg-gradient-to-b from-blue-700 via-blue-800 to-blue-950 text-blue-50">
+    <div className="flex h-full flex-col bg-blue-800 text-blue-50">
       <Link href="/" onClick={() => setOpen(false)} className="flex items-center gap-3 px-5 pt-6 pb-5">
         <span className="grid h-10 w-10 place-items-center rounded-xl bg-white/15 ring-1 ring-white/25">
-          <Icon name="calendar" className="h-5 w-5 text-white" />
+          <Icon name="antenna" className="h-5 w-5 text-white" />
         </span>
         <span className="leading-tight">
           <span className="block text-base font-bold tracking-wide text-white">Montib PKP</span>
@@ -67,7 +67,7 @@ export function Sidebar({ user }: { user: { name: string; role: Role } }) {
 
       <div className="m-3 rounded-xl bg-white/10 p-3 ring-1 ring-white/10">
         <div className="flex items-center gap-3">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-gradient-to-br from-sky-300 to-blue-400 text-sm font-bold text-blue-950">
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-sky-300 text-sm font-bold text-blue-950">
             {initials(user.name)}
           </span>
           <div className="min-w-0 flex-1 leading-tight">
@@ -94,7 +94,7 @@ export function Sidebar({ user }: { user: { name: string; role: Role } }) {
       <aside className="no-print fixed inset-y-0 left-0 z-40 hidden w-64 lg:block">{panel}</aside>
 
       {/* Mobile: bar atas + drawer */}
-      <div className="no-print sticky top-0 z-40 flex items-center gap-3 bg-gradient-to-r from-blue-700 to-blue-800 px-3 py-2.5 text-white shadow-md lg:hidden">
+      <div className="no-print sticky top-0 z-40 flex items-center gap-3 bg-blue-800 px-3 py-2.5 text-white shadow-md lg:hidden">
         <button
           onClick={() => setOpen(true)}
           className="grid h-9 w-9 place-items-center rounded-lg hover:bg-white/15"
@@ -128,8 +128,8 @@ export function Sidebar({ user }: { user: { name: string; role: Role } }) {
 export function SidebarSkeleton() {
   return (
     <>
-      <aside className="no-print fixed inset-y-0 left-0 z-40 hidden w-64 bg-gradient-to-b from-blue-700 via-blue-800 to-blue-950 lg:block" />
-      <div className="no-print sticky top-0 z-40 h-14 bg-gradient-to-r from-blue-700 to-blue-800 lg:hidden" />
+      <aside className="no-print fixed inset-y-0 left-0 z-40 hidden w-64 bg-blue-800 lg:block" />
+      <div className="no-print sticky top-0 z-40 h-14 bg-blue-800 lg:hidden" />
     </>
   );
 }

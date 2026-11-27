@@ -17,6 +17,7 @@ const paths = {
   alert: "M12 9v4m0 4h.01M10.3 3.9 2.4 17.6A2 2 0 0 0 4.1 20.6h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z",
   list: "M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01",
   arrowRight: "M5 12h14m-6-6 6 6-6 6",
+  antenna: "M12 13v8m-3.5 0h7M9 7.5a4 4 0 0 0 0 5M15 7.5a4 4 0 0 1 0 5M6.2 4.8a8 8 0 0 0 0 10.4M17.8 4.8a8 8 0 0 1 0 10.4M12 10h.01",
 } as const;
 
 export type IconName = keyof typeof paths;

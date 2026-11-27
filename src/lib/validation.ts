@@ -46,15 +46,7 @@ export const activitySchema = z.object({
 
 export const officerSchema = z.object({
   name: req("Nama petugas"),
-  nip: opt(30),
   position: opt(100),
-  phone: opt(30),
-  email: z
-    .string()
-    .trim()
-    .optional()
-    .transform((v) => (v ? v : null))
-    .refine((v) => v === null || z.email().safeParse(v).success, "Email tidak valid"),
   teamId: optId,
 });
 

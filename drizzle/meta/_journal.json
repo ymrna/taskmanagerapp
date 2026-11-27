@@ -15,6 +15,13 @@
       "when": 1795691880360,
       "tag": "0001_groovy_annihilus",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795750224827,
+      "tag": "0002_aspiring_rhodey",
+      "breakpoints": true
     }
   ]
 }

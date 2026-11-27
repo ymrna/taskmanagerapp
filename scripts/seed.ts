@@ -59,8 +59,8 @@ async function main() {
   const offs = await db
     .insert(officers)
     .values([
-      { name: "Andi Pratama", nip: "198701012010011001", position: "Ketua Tim", teamId: tA.id },
-      { name: "Siti Rahma", nip: "199003152015022002", position: "Analis", teamId: tA.id },
+      { name: "Andi Pratama", position: "Ketua Tim", teamId: tA.id },
+      { name: "Siti Rahma", position: "Analis", teamId: tA.id },
       { name: "Budi Santoso", position: "Staf", teamId: tB.id },
       { name: "Dewi Lestari", position: "Pranata Komputer", teamId: tB.id },
     ])

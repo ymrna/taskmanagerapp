@@ -46,24 +46,24 @@ async function Dashboard({ searchParams }: { searchParams: PageProps<"/">["searc
           label="Total task"
           value={t.total}
           note={`${d.thisWeek} task minggu ini`}
-          tone="from-blue-500 to-indigo-600"
+          tone="bg-blue-700"
         />
         <Stat
           icon="check"
           label="Selesai"
           value={t.selesai}
           note={`${pct(t.selesai, t.total)}% dari total`}
-          tone="from-emerald-500 to-green-600"
+          tone="bg-emerald-600"
         />
-        <Stat icon="clock" label="Belum" value={t.belum} note="menunggu dikerjakan" tone="from-slate-500 to-slate-700" />
-        <Stat icon="swap" label="Diganti" value={t.diganti} note="jadwal ulang / ganti" tone="from-amber-400 to-orange-500" />
-        <Stat icon="x" label="Tidak dikerjakan" value={t.tidak_dikerjakan} note="dibatalkan" tone="from-rose-500 to-red-600" />
+        <Stat icon="clock" label="Belum" value={t.belum} note="menunggu dikerjakan" tone="bg-slate-600" />
+        <Stat icon="swap" label="Diganti" value={t.diganti} note="jadwal ulang / ganti" tone="bg-amber-500" />
+        <Stat icon="x" label="Tidak dikerjakan" value={t.tidak_dikerjakan} note="dibatalkan" tone="bg-rose-600" />
         <Stat
           icon="alert"
           label="Terlambat"
           value={d.overdue}
           note="belum, minggu sudah lewat"
-          tone={d.overdue ? "from-fuchsia-500 to-purple-600" : "from-slate-400 to-slate-500"}
+          tone={d.overdue ? "bg-purple-600" : "bg-slate-400"}
         />
       </div>
 
@@ -167,7 +167,7 @@ async function Dashboard({ searchParams }: { searchParams: PageProps<"/">["searc
                     >
                       <span
                         className={`grid w-14 shrink-0 place-items-center rounded-lg py-1.5 text-center leading-tight ${
-                          diff === 0 ? "bg-gradient-to-br from-blue-500 to-blue-700 text-white" : "bg-blue-50 text-blue-800"
+                          diff === 0 ? "bg-blue-700 text-white" : "bg-blue-50 text-blue-800"
                         }`}
                       >
                         <span className="text-[10px] font-semibold uppercase">M{w.index}</span>
@@ -232,9 +232,9 @@ function Filters({ d }: { d: DashboardData }) {
 function Stat({ icon, label, value, note, tone }: { icon: IconName; label: string; value: number; note: string; tone: string }) {
   return (
     <div className="card relative overflow-hidden p-4">
-      <div className={`absolute -top-6 -right-6 h-20 w-20 rounded-full bg-gradient-to-br opacity-10 ${tone}`} />
+      <div className={`absolute -top-6 -right-6 h-20 w-20 rounded-full opacity-10 ${tone}`} />
       <div className="flex items-center gap-2.5">
-        <span className={`grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br text-white shadow-sm ${tone}`}>
+        <span className={`grid h-9 w-9 place-items-center rounded-lg text-white shadow-sm ${tone}`}>
           <Icon name={icon} className="h-4.5 w-4.5" />
         </span>
         <span className="text-sm font-medium text-slate-600">{label}</span>

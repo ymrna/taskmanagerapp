@@ -14,7 +14,7 @@ export function PageHeader({
 }) {
   return (
     <div className="mb-5 flex flex-wrap items-center gap-4">
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-md shadow-blue-600/25">
+      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-blue-700 text-white shadow-sm">
         <Icon name={icon} className="h-5 w-5" />
       </span>
       <div className="min-w-0 flex-1">

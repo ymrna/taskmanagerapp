@@ -78,10 +78,7 @@ export const activities = pgTable(
 export const officers = pgTable("officers", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
-  nip: text("nip"),
   position: text("position"),
-  phone: text("phone"),
-  email: text("email"),
   teamId: integer("team_id").references(() => teams.id, { onDelete: "set null" }),
 });
 

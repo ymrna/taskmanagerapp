@@ -11,7 +11,7 @@ Aplikasi manajemen jadwal task untuk tim kerja: tabel **Tim Kerja → Kegiatan �
 - **Status**: Belum · Selesai · Diganti · Tidak dikerjakan.
   - *Diganti → Dijadwal ulang*: pilih minggu tujuan; task pengganti dibuat otomatis (dengan petugas yang sama) dan saling tertaut. Menjadwal ulang lagi akan memindahkan task pengganti, bukan menduplikasi.
   - *Diganti → Ganti kegiatan*: catat kegiatan pengganti + alasan.
-- **Master data** (admin): Tim & Kegiatan, Petugas (nama, NIP, jabatan, telepon, email, tim), Pengguna.
+- **Master data** (admin): Tim & Kegiatan, Petugas (nama, tim, jabatan), Pengguna.
 - **Filter & pencarian**: tim, petugas, status, teks bebas (URL dapat di-bookmark).
 - **Export**: Excel (.xlsx dengan header, merge, wrap, freeze pane) dan PDF via halaman cetak (Simpan sebagai PDF).
 - **Role**: *Admin* mengelola semua data; *Anggota* melihat jadwal dan mengubah status task.
